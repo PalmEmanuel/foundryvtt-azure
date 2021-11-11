@@ -1,0 +1,13 @@
+---
+version: "3.8"
+
+services:
+  foundry:
+    image: felddy/foundryvtt:release
+    hostname: <hostname>
+    init: true
+    restart: "no"
+    volumes:
+      - ${WEBAPP_STORAGE_HOME}/site/wwwroot:/data
+    ports:
+      - "30000:30000"
