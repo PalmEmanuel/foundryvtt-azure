@@ -11,7 +11,7 @@ param foundryPassword string
 param appName string
 @description('The hostname of FoundryVTT, defaults to app name')
 param hostname string = '${appName}.azurewebsites.net'
-@description('The name of the web app')
+@description('The location of the web app')
 param location string = resourceGroup().location
 @description('The content of the docker compose file')
 param dockerComposeFileContent string
