@@ -36,9 +36,6 @@ resource appPlan 'Microsoft.Web/serverfarms@2021-02-01' = {
 }
 
 resource webApp 'Microsoft.Web/sites@2021-02-01' = {
-  dependsOn: [
-    appPlan
-  ]
   name: appName
   location: location
   kind: 'app,linux,container'
@@ -53,10 +50,6 @@ resource webApp 'Microsoft.Web/sites@2021-02-01' = {
         {
           name: 'WEBSITES_PORT'
           value: '30000'
-        }
-        {
-          name: 'WEBSITES_ENABLE_APP_SERVICE_STORAGE'
-          value: 'true'
         }
         {
           name: 'FOUNDRY_MINIFY_STATIC_FILES'

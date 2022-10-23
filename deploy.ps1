@@ -1,6 +1,6 @@
-# Change this for your web app name
-$AppName = 'foundry'
-$ResourceGroupName = 'PipeHow-RG'
+# Change this for your web app name and resource group
+$AppName = 'my-foundry-app'
+$ResourceGroupName = 'my-resource-group'
 
 New-AzResourceGroup $ResourceGroupName -Location 'West Europe'
 
@@ -8,7 +8,7 @@ $DeployParams = @{
     Name                     = "$AppName-Deployment"
     ResourceGroupName        = $ResourceGroupName
     TemplateFile             = '.\foundry.bicep'
-    Mode                     = 'Complete' # This removes everything else in the resource group!
+    Mode                     = 'Complete' # This deletes everything else in the resource group!
     Force                    = $true
     Confirm                  = $false
     ErrorAction              = 'Stop'

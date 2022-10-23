@@ -9,5 +9,3 @@ services:
     restart: "no"
     volumes:
       - ${WEBAPP_STORAGE_HOME}/site/wwwroot:/data
-    ports:
-      - "30000:30000"
