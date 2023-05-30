@@ -8,7 +8,6 @@ $DeployParams = @{
     Name                     = "$AppName-Deployment"
     ResourceGroupName        = $ResourceGroupName
     TemplateFile             = '.\foundry.bicep'
-    Mode                     = 'Complete' # This deletes everything else in the resource group!
     Force                    = $true
     Confirm                  = $false
     ErrorAction              = 'Stop'
